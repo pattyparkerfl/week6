@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Chemistry Lessons</title>
+	
+	<!--link for style sheet-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+	<!--js defining 4 lesson variables, properties (type, dok, unit, and standard), and method to display lesson info --> 
+	<script>
+		var lesson1 = {
+	  		type: "lab",
+	  		dok: "4",
+    		unit: "stoichiometry",
+    		standard: "SC.912.P.10",
+			
+			describeLesson: function ()
+  			{ 
+  				return ("This lesson is a " + this.type + " for the " + this.unit + " unit. It covers the following standard- " + this.standard + " and has a DOK of " + this.dok );
+  			}
+		};
+
+		var lesson2 = {
+	  		type: "sub plan",
+	  		dok: "2",
+    		unit: "gas laws",
+    		standard: "SC.912.L.17",
+			
+			describeLesson: function ()
+  			{ 
+  				return ("This lesson is a " + this.type + " for the " + this.unit + " unit. It covers the following standard- " + this.standard + " and has a DOK of " + this.dok );
+  			}
+		};
+
+		var lesson3 = {
+	  		type: "cooperative work",
+	  		dok: "3",
+    		unit: "atoms",
+    		standard: "SC.912.P.8",
+			
+			describeLesson: function ()
+  			{ 
+  				return ("This lesson is a " + this.type + " for the " + this.unit + " unit. It covers the following standard- " + this.standard + " and has a DOK of " + this.dok );
+  			}
+		};
+		
+		var lesson4 = {
+	  		type: "practice",
+	  		dok: "3",
+    		unit: "thermochemistry",
+    		standard: "SC.912.L.14.6",
+			
+			describeLesson: function ()
+  			{ 
+  				return ("This lesson is a " + this.type + " for the " + this.unit + " unit. It covers the following standard- " + this.standard + " and has a DOK of " + this.dok );
+  			}
+		};
+
+	</script>
+</head>
+
+<body>
+	
+	<!--this is the top banner...logo and navigation-->
+	<div class="topnav">
+		<h1> FEATURED TEACHER RESOURCES</h1>
+	</div>
+	
+	<!--this is the left container for featured lab, has button link  for lesson info and button link to get lesson and button link to get more labs-->
+	<div class="container-left">
+		<h1>S'more Stoichimetry</h1>      
+      	<img src = "images/smore.jpg">
+		<h3 id="stoic"> </h3>
+ 		<button onclick="document.getElementById('stoic').innerHTML = lesson1.describeLesson()">Get lesson info </button>
+		<button onclick="parent.open('placeholder.html')">Get Lesson</button> 
+		<button onclick="parent.open('placeholder.html')">Get more labs</button>
+	</div>
+	
+	<!--this is the right container for featured group activity, has button link  for lesson info and button link to get lesson and button link to get more activities-->
+	<div class="container-right">
+		<h1>Atoms</h1>      
+      	<img src = "images/atom.gif">
+		<h3 id="group"> </h3>
+ 		<button onclick="document.getElementById('group').innerHTML = lesson3.describeLesson()">Get lesson info </button> 
+		<button onclick="parent.open('placeholder.html')">Get Lesson</button> 
+		<button onclick="parent.open('placeholder.html')">Get more activities</button> 
+	</div>
+	
+	<!--this is the left container for featured sub plan, has button link  for lesson info and button link to get lesson and button link to get more sub plans-->
+	<div class="container-left">
+		<h1>Gas Laws</h1>      
+      	<img src = "images/scuba.jpg">
+		<h3 id="sub"> </h3>
+ 		<button onclick="document.getElementById('sub').innerHTML = lesson2.describeLesson()">Get lesson info </button>
+		<button onclick="parent.open('placeholder.html')">Get Lesson</button> 
+		<button onclick="parent.open('placeholder.html')">Get more sub plans</button>
+	</div>
+	
+	<!--this is the right container for featured group worksheet, has button link  for lesson info and button link to get lesson and button link to get moreworksheets-->
+	<div class="container-right">
+		<h1>Thermochemistry</h1>      
+      	<img src = "images/hess.jpg" style="height: 170px;">
+		<h3 id="practice"> </h3>
+ 		<button onclick="document.getElementById('practice').innerHTML = lesson4.describeLesson()">Get lesson info </button>
+		<button onclick="parent.open('placeholder.html')">Get Lesson</button> 
+		<button onclick="parent.open('placeholder.html')">Get more worksheets</button>
+	</div>
+	
+	<!--this is the footer-->
+	<div class="footer">
+		<a href="https://pattyparkerfl.github.io/week3/">Chemistry Corner</a>
+  	</div>
+		 
+</body>
+</html>
